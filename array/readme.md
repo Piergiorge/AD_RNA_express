@@ -22,3 +22,9 @@ The "QC_array.R" file is an R script that implements quality control (QC) for mi
 
 # expression_affy.R:
 The "expression_affy.R" file is an R script that analyses gene expression using Affymetrix microarray data. It utilizes the Affy library and other related R libraries to load the microarray data, preprocess it, perform normalization, identify differentially expressed genes, and visualize the results. The script includes steps like reading the microarray data files, gene filtering, data normalization, and conducting statistical tests to identify significantly expressed genes. It is a valuable tool for gene expression analysis from Affymetrix microarray data related to Alzheimer's disease.
+
+# MetaVolcanoR.R
+MetaVolcanoR is an R script for performing a meta-analysis of gene expression data using the REM (Rank-based Empirical Bayes) MetaVolcano approach. It allows users to summarize gene fold change across multiple studies, estimate summary p-values, and identify consistently perturbed genes.
+
+<div class="csl-entry">Prada-Medina, C. A., Peron, J. P. S., &#38; Nakaya, H. I. (2020). Immature neutrophil signature associated with the sexual dimorphism of systemic juvenile idiopathic arthritis. <i>Journal of Leukocyte Biology</i>, <i>108</i>(4), 1319–1327. https://doi.org/10.1002/JLB.6MA0720-015RR</div>
+
