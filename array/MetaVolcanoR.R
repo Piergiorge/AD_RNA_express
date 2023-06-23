@@ -8,6 +8,7 @@ GSE1297 <- read.table('results/total_res_GSE1297.txt', sep = '\t', header = TRUE
 GSE36980 <- read.table('results/total_res_GSE36980.txt', sep = '\t', header = TRUE)
 GSE84422 <- read.table('results/total_res_GSE84422.txt', sep = '\t', header = TRUE)
 
+# Create a list of datasets
 dataset <- list()
 dataset[['GSE5281']] <- GSE5281
 dataset[['GSE48350']] <- GSE48350
@@ -21,6 +22,7 @@ dataset[['GSE84422']] <- GSE84422
 # Users can set the metathr parameter to highlight the top percentage of the most consistently perturbed genes.
 # This perturbation ranking is defined following the topconfects approach.
 
+# Perform meta-analysis using the REM MetaVolcano approach
 meta_degs_rem <- rem_mv(
   diffexp = dataset,
   pcriteria = "pvalue", #the column name of the pvalue variable <string>
