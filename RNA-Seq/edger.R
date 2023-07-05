@@ -46,7 +46,7 @@ y <- estimateCommonDisp(y)
 y <- estimateTagwiseDisp(y)
 y <- estimateDisp(y)
 
-et <- exactTest(y, pair = c("AD", "Control"))
+et <- exactTest(y, pair = c("Control", "AD"))
 de.top <- topTags(et, n = length(et$table[, 1]))
 de.cpm <- cpm(y)[rownames(de.top),]
 
