@@ -94,12 +94,12 @@ write.table(matriz, file = arquivo, sep = "\t", row.names = TRUE)
 
 ### Metadata for analysis
 cond <- factor(eset$Disease)
-cond <- relevel(x = cond, ref = "AD")
+cond <- relevel(x = cond, ref = "Control")
 Date <- factor(eset$Date)
 Sex <- factor(eset$Sex)
 Age <- factor(eset$Age)
 design <- model.matrix(~0 + cond + as.numeric(Sex) + as.numeric(Date))
-colnames(design) <- c('AD', 'Control', 'Sex', 'Date')
+colnames(design) <- c('Control', 'AD', 'Date', 'Age')
 fit <- lmFit(matriz, design) # Fit linear model
 con <- makeContrasts("AD-Control", levels = design)
 fit2 <- contrasts.fit(fit, con)
